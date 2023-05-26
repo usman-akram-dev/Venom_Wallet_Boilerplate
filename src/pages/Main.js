@@ -95,7 +95,7 @@ function Main({ venomConnect }) {
       <img className="decor" src={BackImg} alt="back" />
       <div className="card">
         <div className="card__wrap">
-          {address ?<Transfer callthis={()=>""}/>
+          {address ?<Transfer callthis={callthis}/>
            : (
             <>
             <ConnectWallet venomConnect={venomConnect} />
