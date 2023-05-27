@@ -66,17 +66,17 @@ function Main({ venomConnect }) {
 
   const callthis = async ()=>{
     const contr = new venomProvider.Contract(abi, IR_CONTRACT_ADDRESS);
-    console.log("contract",contr);
     await contr.methods.transfer({
-      amount: 1 * decimals,
-      recipient: new Address("0:recipientsaddress"),
-      deployWalletValue: toNano(0.1),
-      remainingGasTo: new Address("0:youraddress"),
-      notify: true,
+      amount: 1 * 18,
+      recipient: new Address("0:344e58679c5a91513a7ec1dc590c77db1f7becddf818fde42d4dd907ede056bc"),
+      deployWalletValue: 0,
+      remainingGasTo: new Address("0:a3457cb4910926ebbd181a16077951c54ba2bbbe1769da02ff5b5830182de9c5"),
+      notify: false,
       payload: ''
     }).send({
-      from: new Address("0:youraddress"), 
-      amount: toNano(0.2)
+      from: new Address("0:a3457cb4910926ebbd181a16077951c54ba2bbbe1769da02ff5b5830182de9c5"), 
+      recipient: new Address("0:344e58679c5a91513a7ec1dc590c77db1f7becddf818fde42d4dd907ede056bc"),
+      amount: '1000000000'
     });
 
   }
